@@ -1,10 +1,15 @@
-- 👋 Hi, I’m @swethareddy143
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-
-<!---
-swethareddy143/swethareddy143 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+for(Map.Entry<String,TreeMap<String,TreeMap<String,ArrayList<String>>>> en:tm.entrySet()){
+	System.out.print(en.getKey()+"-->");
+	TreeMap<String,TreeMap<String,ArrayList<String>>> tm1=en.getValue();
+	for(Map.Entry<String,TreeMap<String,ArrayList<String>>> en1:tm1.entrySet()){
+		System.out.print(en1.getKey()+"-->");
+		TreeMap<String,ArrayList<String>> tm2=en1.getValue();
+		for(Map.Entry<String,ArrayList<String>> en2:tm2.entrySet()){
+		System.out.print(en2.getKey()+"-->");
+				ArrayList<String> ar=en2.getValue();
+				for(int i=0;i<ar.size();i++){
+					System.out.print(ar.get(i)+"->");
+				}
+		}
+	}
+}
